@@ -1,0 +1,15 @@
+{
+  "name": "uhwait",
+  "version": "1.0.0",
+  "description": "uhwait === A simple async/await gadget that adds seamless message passing to JavaScript.",
+  "main": "uhwait.js",
+  "directories": {
+    "example": "examples"
+  },
+  "engines" : { "node" : ">=8.9.0" },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Keane <james.keane@gmail.com>",
+  "license": "ISC"
+}
