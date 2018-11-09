@@ -1,7 +1,10 @@
 {
   "name": "uhwait",
   "version": "1.0.0",
-  "description": "uhwait === A simple async/await gadget that adds seamless message passing to JavaScript.",
+  "description": "erlang semantics for javascript",
+  "keywords": ["actor", "message passing", "erlang", "gadget", "async", "await"],
+  "homepage": "https://github.com/jameskeane/uhwait#readme",
+  "repository": "github:jameskeane/uhwait",
   "main": "uhwait.js",
   "directories": {
     "example": "examples"
@@ -11,5 +14,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "James Keane <james.keane@gmail.com>",
-  "license": "ISC"
+  "license": "MIT"
 }
