@@ -5,11 +5,18 @@ async function hello() {
   const [msg] = await receive();
   if (msg === 'exit') return;
 
-  console.log('hello', msg);  
-  hello();
+  console.log(`hello ${msg} from pid(${self().id})`);  
+
+  // process context is fully tracked through async continuations
+  console.log('let\'s wait for a sec.');
+  setTimeout(() => {
+    console.log(`still me, pid(${self().id})`);
+    hello();
+  }, 1000);
 }
 
 async function watcher(pid) {
+  console.log(`pid(${self().id}) watching pid(${pid.id})`);
   let exit_reason = await pid.join();
   console.log(`pid ${pid.id} exited with ${exit_reason}`);
 }

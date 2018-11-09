@@ -1,6 +1,6 @@
 {
   "name": "uhwait",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "erlang semantics for javascript",
   "keywords": ["actor", "message passing", "erlang", "gadget", "async", "await"],
   "homepage": "https://github.com/jameskeane/uhwait#readme",

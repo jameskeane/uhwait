@@ -16,6 +16,9 @@ uhwait provides `spawn`, `self`, and `receive` semantics, that when used with `a
 
 On top of those primitives, the `pid` object returned by spawn provides `pid.send(...args)` to send a message to the process, and `pid.join()` to wait until a process exits.
 
+An actor's 'process' context is fully managed through subsequent async continuations, regardless of nesting. `join` will properly wait until there are no more continuations remaining. See `examples/helloworld.js` for details.
+
+
 ```javascript
 const { self, receive, spawn } = require('uhwait');
 
@@ -29,7 +32,6 @@ async function watcher(pid) {
   await pid.join();
   console.log(`pid ${pid.id} exited with ${pid.exit_reason}`);
 }
-
 
 const hello = spawn(hello);
 spawn(watcher, [hello]);
